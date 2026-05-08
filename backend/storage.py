@@ -2,16 +2,19 @@ import json
 import os
 from datetime import datetime
 
-FILE = "products.json"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+FILE_PATH = os.path.join(BASE_DIR, "products.json")
+
 
 def load_products():
-    if not os.path.exists(FILE):
+    if not os.path.exists(FILE_PATH):
         return []
-    with open(FILE, "r") as f:
+    with open(FILE_PATH, "r") as f:
         return json.load(f)
 
+
 def save_products(products):
-    with open(FILE, "w") as f:
+    with open(FILE_PATH, "w") as f:
         json.dump(products, f, indent=2)
 
 def add_product(product):

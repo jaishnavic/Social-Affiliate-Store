@@ -13,6 +13,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/")
+def root():
+    return {"message": "API running"}
+
+    
 # 🔹 Preview product (NO SAVE)
 @app.post("/preview-product")
 def preview_product(data: dict):

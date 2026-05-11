@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from backend.scrapers.meesho import scrape_meesho
-from backend.storage import add_product, load_products, save_products
+from scrapers.meesho import scrape_meesho
+from storage import add_product, load_products, save_products
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()

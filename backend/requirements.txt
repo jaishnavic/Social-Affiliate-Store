@@ -4,4 +4,4 @@ requests
 beautifulsoup4
 pydantic
 tldextract
-playwrightv        
+playwright     

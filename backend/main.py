@@ -1,7 +1,7 @@
 from fastapi import FastAPI
-from backend.scrapers.meesho import scrape_meesho
-from backend.scrapers.instagram import fetch_instagram_thumbnail, debug_fetch
-from backend.storage import (
+from scrapers.meesho import scrape_meesho
+from scrapers.instagram import fetch_instagram_thumbnail, debug_fetch
+from storage import (
     add_product, load_products, save_products, get_product_by_id,
     add_reel, load_reels, save_reels, attach_products_to_reel
 )
